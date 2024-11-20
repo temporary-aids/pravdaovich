@@ -37,7 +37,7 @@ export const MythCard: FC<MythCardProps> = ({
           width={80}
           height={100}
         />
-        <h3 className="text-3xl font-medium text-center text-[#FF0000]">
+        <h3 className="text-3xl font-medium text-center text-[#FF0000] z-50">
           {title}
         </h3>
       </div>

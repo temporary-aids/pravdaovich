@@ -38,7 +38,7 @@ export const FactCard: FC<FactCardProps> = ({
           width={70}
           height={100}
         />
-        <h3 className="text-3xl font-medium text-blue-600 text-center">
+        <h3 className="text-3xl font-medium text-blue-600 text-center z-50">
           {title}
         </h3>
       </div>
