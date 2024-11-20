@@ -23,27 +23,30 @@ export const FactCard: FC<FactCardProps> = ({
 
   return (
     <div
-      className="border-2 relative border-blue-500 p-14 rounded-3xl transition-all cursor-pointer"
+      className="border-2 relative border-blue-500 p-5 md:p-14 rounded-3xl transition-all cursor-pointer"
       onClick={toggleOpen}
     >
-      <div className="flex items-center justify-center gap-4 mb-2">
+      <div className="flex items-center md:justify-center gap-4 mb-2">
         <Image
           className={cn(
-            "absolute top-0",
-            isImageRight ? "left-[5%]" : "right-[5%]",
-            image === "/icons/condom.svg" && "rotate-[270deg] top-[-2%]",
+            "absolute top-0 w-[40px] md:w-[80px]",
+            isImageRight
+              ? "right-[5%] md:left-[5%]"
+              : "right-[2%] md:right-[5%]",
+            image === "/icons/condom.svg" &&
+              "rotate-[270deg] top-[-2%] right-[0%] md:right-[5%]",
           )}
           src={image}
           alt={title}
-          width={70}
+          width={50}
           height={100}
         />
-        <h3 className="text-3xl font-medium text-blue-600 text-center z-50">
+        <h3 className="text-xl md:text-3xl font-medium text-blue-600 md:text-center z-49">
           {title}
         </h3>
       </div>
       <p
-        className={`text-2xl overflow-hidden transition-all text-center ${
+        className={`text-sm md:text-2xl overflow-hidden transition-all md:text-center ${
           isOpen ? "max-h-96" : "max-h-0"
         }`}
       >

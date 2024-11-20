@@ -1,5 +1,6 @@
 import { cn } from "@/shared/ui/utils";
 import { AppHeader } from "@/widgets/app-header/app-header";
+import { Footer } from "@/widgets/footer";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Image from "next/image";
@@ -63,12 +64,13 @@ export default function RootLayout({
       </head>
       <body
         className={cn(
-          "min-h-screen bg-background antialiased pb-16 lg:pb-32",
+          "min-h-screen bg-background antialiased",
           Gerbera.className,
         )}
       >
         <AppHeader />
         {children}
+        <Footer />
 
         <noscript>
           <div>
