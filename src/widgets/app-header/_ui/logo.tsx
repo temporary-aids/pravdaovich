@@ -21,7 +21,11 @@ export function Logo() {
   }, []);
 
   return (
-    <a href="https://spid.center" target="_blank" rel="noopener noreferrer">
+    <a
+      href="https://spid.center/ru/about"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <LogoIcon width={isMobile ? 102 : undefined} />
     </a>
   );

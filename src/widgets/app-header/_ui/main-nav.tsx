@@ -58,15 +58,17 @@ export function MainNav({ isMenuOpen, onMenuToggle }: MainNavProps) {
         </a>
         <a
           className="transition-colors hover:text-[#FF0000] text-foreground/60 uppercase"
-          href="#get-tested"
-          onClick={handleClick}
+          href="https://spid.center/ru/test"
+          rel="noopener noreferrer"
+          target="_blank"
         >
           Протестироваться
         </a>
         <a
           className="transition-colors hover:text-[#FF0000] text-foreground/60 uppercase"
-          href="#knowledge-base"
-          onClick={handleClick}
+          href="https://spid.center/ru/hiv"
+          rel="noopener noreferrer"
+          target="_blank"
         >
           База знаний
         </a>
