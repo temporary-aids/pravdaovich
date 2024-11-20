@@ -1,24 +1,13 @@
-"use client";
-
 export function Layout({
   logo,
   nav,
-  onMenuToggle,
 }: {
   logo?: React.ReactNode;
   nav?: React.ReactNode;
   actions?: React.ReactNode;
-  onMenuToggle: (isOpen: boolean) => void;
 }) {
-  const handleMouseLeaveHeader = () => {
-    onMenuToggle(false);
-  };
-
   return (
-    <header
-      className="sticky top-0 z-50 sm:py-6 lg:py-8 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
-      onMouseLeave={handleMouseLeaveHeader}
-    >
+    <header className="sticky top-0 z-50 sm:py-6 lg:py-8 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         {logo}
 

@@ -3,12 +3,7 @@
 import { BurgerMenu } from "@/features/burger-menu/ui/BurgerMenu";
 import { cn } from "@/shared/ui/utils";
 
-interface MainNavProps {
-  isMenuOpen: boolean;
-  onMenuToggle: (isOpen: boolean) => void;
-}
-
-export function MainNav({ isMenuOpen, onMenuToggle }: MainNavProps) {
+export function MainNav() {
   const HEADER_HEIGHT = 128;
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
@@ -31,8 +26,7 @@ export function MainNav({ isMenuOpen, onMenuToggle }: MainNavProps) {
     <>
       <nav
         className={cn(
-          "gap-5 2xl:gap-16 font-medium text-xs xl:text-xl 2xl:text-2xl flex-col md:flex-row mr-9 xl:mr-20 items-center",
-          isMenuOpen ? "flex" : "hidden",
+          "flex gap-5 2xl:gap-16 font-medium text-xs xl:text-xl 2xl:text-2xl flex-col md:flex-row mr-9 xl:mr-20 items-center",
         )}
       >
         <a
@@ -74,7 +68,7 @@ export function MainNav({ isMenuOpen, onMenuToggle }: MainNavProps) {
         </a>
       </nav>
 
-      <BurgerMenu onMenuToggle={onMenuToggle} />
+      <BurgerMenu />
     </>
   );
 }
