@@ -42,7 +42,7 @@ export const MythCard: FC<MythCardProps> = ({
         </h3>
       </div>
       <p
-        className={`text-2xl text-gray-700 overflow-hidden transition-all text-center ${
+        className={`text-2xl overflow-hidden transition-all text-center ${
           isOpen ? "max-h-96" : "max-h-0"
         }`}
       >
